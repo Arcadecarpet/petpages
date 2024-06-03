@@ -1,0 +1,833 @@
+<style>
+.sf {
+	display: none;
+}
+table {
+	background-color: transparent;
+}
+table a img {
+	display: none;
+}
+body {
+	background: url("http://i.imgur.com/7z8FU2V.jpeg");
+}
+a:link, a:visited, a:active {
+	color: #EE53C6;
+	text-decoration: none;
+}
+a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+b {
+	color: #fff;
+}
+i {
+	color: #EBBBF2;
+	font-family: georgia;
+	letter-spacing: 1px;
+}
+strong {
+	font: 12.5pt century;
+	color: #EE53C6;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+h1 {
+	font: 32pt century;
+	color: #BBB;
+	text-align: center;
+	letter-spacing: 4px;
+}
+h2 {
+	font: 12pt courier;
+	color: #EE53C6;
+	text-align: center;
+	letter-spacing: 2px;
+	text-transform: lowercase;
+	font-style: italic;
+	margin-top: -35px;
+	margin-bottom: 10px;
+}
+h3 {
+	font: 2.5em century;
+	text-transform: uppercase;
+	margin: 0 10px -5px -18px;
+	color: #fef6e1;
+	text-align: right;
+	letter-spacing: 0.2em;
+	border: 0px solid #333;
+}
+h4 {
+	font: 18px georgia;
+	color: #EE53C6;
+	letter-spacing: 1px;
+	margin: 10 0 10 0;
+	text-transform: lowercase;
+	text-align: left;
+}
+ul {
+	list-style-type: decimal-leading-zero;
+}
+ul.radx {
+	list-style-image: url("http://64.media.tumblr.com/tumblr_ll7wdzZgye1qi6qow.gif");
+}
+ul.pos {
+	list-style-image: url("http://i.imgur.com/telBsCn.gif");
+}
+ul.neg {
+	list-style-image: url("http://arcadiance.neocities.org/Images/Layout/dex/km.png");
+}
+#nav {
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+	border: none;
+	padding: 10px;
+	text-align: center;
+	background-color: #000;
+	border-bottom: 1px solid #000;
+}
+#nav a {
+	font: 7pt verdana;
+	letter-spacing: 2px;
+	color: #BBB !important;
+	text-decoration: none;
+	text-transform: lowercase;
+	padding-left: 15px;
+	margin: 20px;
+	padding-right: 15px;
+	z-index: 0;
+}
+#nav a:hover {
+	color: #000 !important;
+}
+#middle {
+	padding: 0px;
+	width: 980px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 10px;
+	margin-bottom: -130px;
+	background: url("http://i.imgur.com/dQz3s0P.png");
+	border-right: 20px solid #000;
+	border-left: 20px solid #000;
+	text-align: justify;
+	font-size: 9pt;
+	font-family: verdana;
+	line-height: 18pt;
+	color: #BBB;
+}
+tr, td {
+	font-size: 0.90em;
+	font-family: "HelveticaNeue-Light","Helvetica-Light",verdana,sans-serif;
+	line-height: 0.9em;
+	color: #fff;
+}
+#content {
+	width: 850px;
+	background: none;
+	padding: 30px;
+	text-align: justify;
+	margin: auto;
+}
+#box {
+	width: 800px;
+	background: url("http://i.imgur.com/Jjk8AIa.png");
+	padding: 20px;
+	text-align: justify;
+	border: 1px solid #000;
+	margin: auto;
+	margin-left: -11px;
+}
+#friendbox {
+	width: 550px;
+	background: url("http://i.imgur.com/JH6S8C2.png");
+	border: 1px solid #000;
+	padding: 10px;
+	float: right;
+	margin-top: -337px;
+	overflow: hidden;
+}
+#friendbox-outer {
+	height: 100%;
+	overflow: hidden;
+	padding: 5px;
+	width: 540px;
+}
+#neo a {
+	width: 150px;
+	height: 320px;
+	overflow: hidden;
+	display: inline-block;
+	margin: 5px;
+	padding: 15px;
+	border: 1px #000 solid;
+}
+#neo a:hover img {
+	width: 340px;
+	display: inline !important;
+}
+#neo img {
+	margin-top: -10px;
+	margin-left: -80px;
+	width: 340px;
+	display: inline !important;
+}
+#profneo a {
+	float: left;
+	width: 140px;
+	height: 315px;
+	overflow: hidden;
+	display: inline-block;
+	margin: 5px;
+	padding: 5px;
+	border: 1px #000 solid;
+}
+#profneo a:hover img {
+	float: left;
+	width: 335px;
+	display: inline !important;
+}
+#profneo img {
+	float: left;
+	margin-top: -10px;
+	margin-left: -100px;
+	width: 335px;
+	display: inline !important;
+}
+span.custom {
+	width: 360px;
+	height: 360px;
+	display: inline-block;
+	border: none;
+	margin: 20px 25px 30px 26px;
+}
+span.custom2 {
+	width: 360px;
+	height: 360px;
+	display: inline-block;
+	border: none;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+span.custom span, span.custom2 span {
+	background: url("http://i.imgur.com/Jjk8AIa.png");
+	color: #BBB;
+	font: 9pt verdana;
+	letter-spacing: 1px;
+	border: 0px black solid;
+	width: 360px;
+	text-align: center;
+	display: block;
+	padding: 10px 0px;
+	bottom: 0;
+}
+ul.arts {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	list-style: none;
+	display: inline-block;
+}
+ul.arts li {
+	border: 0px;
+	width: 100px;
+	display: inline-block;
+}
+ul.arts img {
+	padding: 2px;
+	border: 1px #222 solid;
+}
+ul.arts span {
+	z-index: 1;
+	display: none;
+	padding: 10px;
+	font-size: 9pt;
+	font-family: verdana;
+	font-style: italic;
+	color: #BBB;
+	line-height: 16pt;
+	text-align: justify;
+	margin: -50px 0px 0px 30px;
+	border: 1px #000 solid;
+	background: url("http://i.imgur.com/rZHHlD2.png");
+}
+ul.arts li span img {
+	margin: 5px auto;
+	display: block;
+	border: 0px;
+}
+ul.arts li:hover span {
+	display: block;
+}
+img.icon {
+	width: 100px;
+	height: 100px;
+}
+img.zoom {
+	width: 300px;
+}
+#credit1 {
+	width: 270px;
+	height: 300px;
+	background: url("http://i.imgur.com/JH6S8C2.png");
+	border: 1px solid #000;
+	padding: 15px;
+	margin-right: 15px;
+	text-align: justify;
+	border-bottom: 10px solid #222;
+}
+#credit2 {
+	width: 445px;
+	height: 300px;
+	background: url("http://i.imgur.com/JH6S8C2.png");
+	border: 1px solid #000;
+	padding: 15px;
+	text-align: justify;
+	border-bottom: 10px solid #222;
+	line-height: 20px;
+}
+#otherlinks {
+	width: 764px;
+	background: url("http://i.imgur.com/JH6S8C2.png");
+	border: 1px solid #000;
+	padding: 15px;
+	margin-left: 3px;
+	margin-top: 15px;
+	text-align: justify;
+	border-bottom: 10px solid #222;
+}
+textarea {
+	width: 88px;
+	height: 25px;
+	background: url("http://i.imgur.com/Jjk8AIa.png");
+	color: #EE53C6;
+	font: 7pt ms gothic !important;
+	border: 1px solid #222;
+	margin-top: 5px;
+	overflow: hidden;
+}
+.parent {
+	border: 0px solid #EE53C6;
+	text-align: left;
+	width: 900px;
+}
+.child {
+	display: inline-block;
+	border: 0px solid #EE53C6;
+	width: 440px;
+	color: #fff;
+	height: 365px;
+	line-height: 1.7em;
+	overflow: hidden;
+	margin: 15px 0px;
+}
+.child i {
+	font: 0.85em georgia;
+	font-style: italic;
+	color: #EE53C6;
+	letter-spacing: 1px;
+}
+.short {
+	background: #111 no-repeat;
+	padding: 30px 30px 60px 30px;
+	margin: 30px 70px;
+	border: 0px solid #888;
+	color: #fff;
+	font: 9pt verdana;
+	line-height: 15pt !important;
+	font-style: -blocked-;
+}
+blockquote {
+	padding: 30px;
+	border: 0px solid #EE53C6;
+	background: #111 no-repeat;
+}
+blockquote i {
+	font: 1.5em perpetua;
+	font-style: italic;
+	color: #fff;
+}
+blockquote b {
+	font-weight: bold;
+	color: #EE53C6;
+	font: small-caps 16pt tahoma;
+	letter-spacing: 2pt;
+}
+blockquote strong {
+	font-weight: bold;
+	color: #fff;
+	font: small-caps 16pt georgia;
+}
+.center {
+	text-align: center;
+}
+.right {
+	text-align: right;
+}
+.storybox {
+	width: 700px;
+	margin: 0px auto;
+	padding: 2px 2px 30px;
+	text-align: justify;
+	font: 9pt verdana;
+	line-height: 18pt;
+	color: #fff;
+}
+.buttonbox {
+	height: 800px;
+	overflow: hidden;
+	margin: 0px auto;
+	margin-top: -285px;
+}
+.storybox_push {
+	padding-top: 275px;
+}
+.button {
+	background: none;
+	text-align: center;
+	padding: 10px 0px 12px 0px;
+	margin: 0px auto 0px auto;
+}
+.click a {
+	color: #000 !important;
+	font-weight: bold !important;
+	font: 12pt tahoma;
+	letter-spacing: 2px;
+	display: inline-block;
+	padding: 3px 7px;
+	margin: 2px;
+	background: #EE53C6;
+}
+.click a:hover {
+	background: #EE53C6;
+	color: #fff !important;
+}
+.start {
+	background: #EE53C6;
+	font: small-caps 14pt tahoma;
+	color: #000 !important;
+	font-weight: bold;
+	text-decoration: none;
+	display: inline-block;
+	padding: 3px 20px;
+	margin: 5px 2px 10px 0px;
+}
+.start:hover {
+	background: #EE53C6;
+	color: #fff !important;
+}
+.talesbox {
+	border-top: 1px solid NONE;
+	border-bottom: 1px solid NONE;
+	padding: 0px 0px 0px 0px;
+	margin: -5px auto -5px auto;
+}
+.tales {
+	height: 450px;
+	overflow: auto;
+	padding: 50px 50px 50px 50px;
+	margin: 0px 20px 5px 20px;
+	background: #111;
+}
+.tales p {
+	text-indent: 40px;
+}
+.tales b {
+	font: 1.1em verdana;
+	font-style: normal;
+	color: #EE53C6;
+}
+.tales span {
+	font-weight: normal;
+	font-style: normal;
+	text-align: justify;
+	font-size: 28pt;
+	line-height: 32px;
+	font-family: perpetua;
+	color: #fff;
+}
+#hd {
+	background: url("http://i.imgur.com/poD79nb.png") no-repeat;
+	width: 1020px;
+	margin: -10 auto;
+	height: 220px;
+	display: block;
+}
+</style><div id="nav" style="position: fixed;">
+<a href="#begin">welcome</a>
+<a href="#profile">profile</a>
+<a href="#text1">basics</a>
+<a href="#text2">tales</a>
+<a href="#friends">friends</a>
+<a href="#extras">extras</a>
+<a href="#end">goodbye</a>
+</div>
+
+
+<div id="middle"><a name="begin"></a>
+<div id="content">
+
+<h1 style="margin-top: 5px;">✦ B L A K E</h1><h2>text here if you wish it.</h2>
+<p></p>
+<center><img src="http://i.imgur.com/9fhNeUM.gif" width="700"></center>
+
+<blockquote class="short" style="border-radius: 3px;">
+<div class="center">
+
+<b>now playing <br></b>
+<i>Lilith / Ellise <br>
+I Did Something Bad / Taylor Swift <br>
+Devil on My Shoulder / Faith ?? <br>
+Devil in Me / Halsey </i>
+
+<p>It was a warm and sunny day when I found her — just a mussed-hair, wild eyed little girl about my own age wandering alone in the forest.
+</p><p>We should have known something wasn't right from the moment we found her.
+</p><p>She was marked, after all.
+
+</p><p>If only we'd known what it meant in the moment, but we had no way of unlocking that kind of knowledge. There was no blood mage handbook in the Hills; it was peaceful, the most serene escape that Nurwen offered. Bad things did not happen here, humans did not roam these rolling hills and prosperous valleys. The security that was found here changed in recent years, unequivocally at the hands of Blake Sinclair. The Spirit Wars had shaken us some, but we hadn't faltered and cr<b></b>acked the way we did as a result of the blood mage.
+
+</p><p>But I'm getting ahead of myself. My name is Crystal… Blake Sinclair used to be my best friend. There are very few memories of my childhood that don't revolve around Blake and I suppose I am still grateful for them… I just wish that reality tasted the same. That Blake had not changed. I'm here to share the beginnings of her story because Blake will never paint it in the same manner in which it happened. Blake takes no responsibility.
+
+</p></div>
+
+<a name="profile"></a>
+
+</blockquote>
+
+<h1>PROFILE</h1><h2>text here if you wish it.</h2>
+
+<p></p><div id="box" style="text-align: left;">
+
+
+<img src="http://i.ibb.co/ym9WRvj/CB1-F142-E-1-E11-437-F-B422-F14-EBE34-EF59.png" width="420" style="float: right; margin-top: -200px; margin-right: -120px;"><div id="profneo">
+<a href="/petlookup.phtml?pet=Blakesterr">
+<img src="http://pets.neopets.com/cpn/Blakesterr/1/5.png"></a>
+</div>
+<b>　Name ✦</b> Blake Sinclair
+<br><b>　Alias ✦</b> B, Blake
+<br><b>　Age ✦</b> 23
+<br><b>　Gender ✦</b> Female
+<br><b>　Species ✦</b> UC Sponge Lupe
+<br><b>　Abilities ✦</b> Manipulation of blood, in or out of bodies
+<br><b>　Family ✦</b> Text here
+<br><b>　Love ✦</b>  None
+<br><b>　Hair ✦</b> Text here
+<br><b>　Markings ✦</b> Text here
+<br><b>　Eyes ✦</b> Text here
+<br><b>　Physique ✦</b> Text here
+<br><b>　Accessories ✦</b> Text here
+</div>
+<div style="height: 10px;"></div>
+
+
+<blockquote>
+<strong>　BIO ✦</strong> A creature of self preservation, Blake comes off as very aloof and keeps to herself. She has a deep seated fear of hurting others and so she emotionally closes off as a protective measure. She blends in well with groups, social only when need be. Blake is content on her own, lending her services to the Black Ice Alliance in exchange for lessons in blood magic from a demon who specializes in it. She finds herself fitting in well with these high ranking outcasts.
+<a name="text1"></a>
+</blockquote>
+
+<h1>BASICS</h1>
+<h2>text here if you wish it</h2>
+<div class="parent">
+<center>
+<div class="child" style="width: 550px; margin-left: 0px;"><div>
+
+<table width="500"><b>likes & dislikes.</b>
+<tr><td width="226">
+<h4>likes</h4>
+<ul class="pos"><li>like</li>
+<li>like</li>
+<li>like</li>
+<li>like</li>
+<li>like</li>
+<li>like</li>
+
+</ul></td>
+
+<td width="300">
+<center><h4>dislikes</h4></center>
+<ul class="neg"><li>dislike</li>
+<li>dislike</li>
+<li>dislike</li>
+<li>dislike</li>
+<li>dislike</li>
+<li>dislike</li>
+
+</ul></td>
+</tr></table></div>
+</div>
+
+
+
+<div class="child" style="width: 300px; margin-left: 10px;">
+
+<b>personality.</b><br><div style="text-align: right; display: inline-block;">
+Disciplined<br>
+Methodical<br>
+Loyal<br>
+Ambitious <br>
+Confident <br>
+Assertive<br>
+Reserved<br>
+An<b></b>alytical<br>
+Independent<br>
+Playful<br>
+Messy<br>
+Affectionate<br>
+Perceptive<br>
+Cautious<br>
+Self-Reliant<br>
+Generous<br></div>
+<div style="text-align: right; display: inline-block; margin-left: 10px; margin-right: 10px;">
+  ────♦───<br>
+  ────♦───<br>
+  ────♦───<br>
+  ────♦───<br>
+  ────♦───<br>
+  ────♦───<br>
+  ────♦───<br>
+  ────♦───<br>
+  ────♦───<br>
+  ────♦───<br>
+  ────♦───<br>
+  ────♦───<br>
+  ────♦───<br>
+  ────♦───<br>
+  ────♦───<br>
+  ────♦───<br></div>
+<div style="text-align: left; display: inline-block;">
+Free-spirited<br>
+Impulsive<br>
+Independent<br>
+Content<br>
+Insecure<br>
+Submissive<br>
+Outgoing<br>
+Spontaneous<br>
+Collaborative<br>
+Serious<br>
+Tidy<br>
+Aloof<br>
+Unaware<br>
+Risk-taker<br>
+Helpless<br>
+Stingy<br></div></div>
+
+</center></div>
+
+
+<a name="text2"></a>
+
+<h1>ORIGIN STORY</h1><h2>text here if you wish it</h2>
+<div id="box">
+<div class="storybox">
+<div class="button" style="position: relative; z-index: 100;">
+<a href="#storyhome" class="start">⊹  HOME ⊹ </a>
+<div class="click">
+<a href="#ch1"> ✦ One </a>
+<a href="#ch2"> ✦ Two</a>
+<a href="#ch3"> ✦ Three </a>
+<a href="#ch4"> ✦ Four </a>
+
+</div>
+</div>
+
+<div class="buttonbox" style="position: relative; z-index: 10;">
+
+<div id="storyhome" class="storybox_push"></div>
+<div class="talesbox">
+<div class="tales"><center><span>
+<img src="http://64.media.tumblr.com/152a2c4ce03aba33bd42b2208d700f26/4880422f7faf0d4c-71/s250x400/c88b3b2ceb132e889d03d29038a5ec4251e60d43.gif" width="500"></span><br><div class="click">
+<a href="#ch1"> BEGIN </a>
+</div>
+</center></div>
+</div>
+
+<div id="ch1" class="storybox_push"></div>
+<div class="talesbox">
+<div class="tales">
+<strong>chapter one:</strong> the arcane
+<p>
+My parents were gone in a flurry of pitchforks and torches. My face had been painted in their blood and cursed to remain there, to mark me for what I was. Magic cursing magic; I thought that the irony was wicked and horrible, but there I was. Eight years old and forced out of the only home I'd ever known. As a child, I never spoke of it. Can you blame me? When the village had discovered the truth about the Sinclair brand of magic, exposed accidentally by the youngest member of the family, they painted us as monsters. As if their own magic was pure and ours was filthy — as if blood magic existed only for nefarious purposes. They were wrong, but they wouldn't be the last to assume such about me and my gift.
+</p><p>
+My name is Blake Sinclair and I come from a line of arcane magic; poorly understood magic by outsiders. I am a blood mage. This gift, or curse, lives in every fiber of my being. It is a piece of me I will never be able to reject, a constant reminder of the jaded past that molded me into who I am. I left the village with nothing but a satchel of basic supplies — the things I had on me in the market. A few coins, a package of dried fruit, a family heirloom dagger… I left, my face painted grotesquely by the villagers, and never looked back.
+</p><p>
+My new marking was one that lived with me until I learned to glamor it. Strong magic left me unable to wash it away in the river, though I tried.. and tried and tried. I scrubbed until my skin felt raw and the subarctic temperature of the Ashpire run off threatened to gnaw off the tip of my nose. But I persisted. I stumbled into <i>Alva</i>, or the Hills of South Nurwen. We often called them the hills on the inside — a magical place that was off limits to humans. My entrance alone gave away my gift in a sense, though it did not tell the whole story.
+</p><p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p><p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+</p><center><div class="click">
+<a href="#ch2">►</a>
+</div></center>
+
+</div>
+</div>
+
+<div id="ch2" class="storybox_push"></div>
+<div class="talesbox">
+<div class="tales">
+<strong>chapter two:</strong> the truth about monsters
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ligula felis, scelerisque vitae vulputate at, condimentum sit amet magna. Nulla quam arcu, mattis sed maximus eget, maximus non est. Nam pretium scelerisque erat at cursus. Pellentesque id rutrum nulla. Nam sed odio auctor, sagittis ipsum auctor, iaculis ante. Maecenas at sapien semper, auctor ex vel, tincidunt libero. Fusce in feugiat ipsum,  gravida dui. Donec lobortis ante sem, at laoreet turpis posuere et. Pellentesque bibendum ultricies ultricies. Curabitur sit amet nisl turpis. Curabitur sodales nulla in metus vestibulum dignissim. Nulla dolor mauris, dignissim mollis sodales eu, mollis pellentesque libero. Donec arcu tortor, pellentesque eget justo non, volutpat iaculis libero. Phasellus vitae  metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc ultrices magna velit, laoreet semper felis posuere ac.
+
+</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ligula felis, scelerisque vitae vulputate at, condimentum sit amet magna. Nulla quam arcu, mattis sed maximus eget, maximus non est. Nam pretium scelerisque erat at cursus. Pellentesque id rutrum nulla. Nam sed odio auctor, sagittis ipsum auctor, iaculis ante. Maecenas at sapien semper, auctor ex vel, tincidunt libero. Fusce in feugiat ipsum,  gravida dui. Donec lobortis ante sem, at laoreet turpis posuere et. Pellentesque bibendum ultricies ultricies. Curabitur sit amet nisl turpis. Curabitur sodales nulla in metus vestibulum dignissim. Nulla dolor mauris, dignissim mollis sodales eu, mollis pellentesque libero. Donec arcu tortor, pellentesque eget justo non, volutpat iaculis libero. Phasellus vitae  metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc ultrices magna velit, laoreet semper felis posuere ac.
+
+</p><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum gravida justo nec tellus iaculis, et facilisis ex placerat. Integer tempus libero orci, eu suscipit tellus malesuada quis. Proin sem ex, venenatis vel molestie et, interdum vitae mauris. Suspendisse id tempus sapien. Vestibulum euismod, arcu ut bibendum convallis, sapien mi hendrerit est, nec aliquet ligula enim sit amet nisl. Pellentesque id dignissim leo, lobortis iaculis est. Proin in erat at nisl maximus posuere id quis diam. Morbi rhoncus facilisis odio, congue scelerisque nunc luctus vehicula. Etiam cursus libero at odio luctus, non varius arcu maximus.
+
+</p><center><div class="click">
+<a href="#ch1">◄</a>     <a href="#ch3">►</a>
+</div></center>
+
+</div>
+</div>
+
+<div id="ch3" class="storybox_push"></div>
+<div class="talesbox">
+<div class="tales">
+<strong>chapter three:</strong> dystychiphobia<br><i> dystychiphobia</i> the fear of hurting someone<br><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ligula felis, scelerisque vitae vulputate at, condimentum sit amet magna. Nulla quam arcu, mattis sed maximus eget, maximus non est. Nam pretium scelerisque erat at cursus. Pellentesque id rutrum nulla. Nam sed odio auctor, sagittis ipsum auctor, iaculis ante. Maecenas at sapien semper, auctor ex vel, tincidunt libero. Fusce in feugiat ipsum,  gravida dui. Donec lobortis ante sem, at laoreet turpis posuere et. Pellentesque bibendum ultricies ultricies. Curabitur sit amet nisl turpis. Curabitur sodales nulla in metus vestibulum dignissim. Nulla dolor mauris, dignissim mollis sodales eu, mollis pellentesque libero. Donec arcu tortor, pellentesque eget justo non, volutpat iaculis libero. Phasellus vitae  metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc ultrices magna velit, laoreet semper felis posuere ac.
+
+</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ligula felis, scelerisque vitae vulputate at, condimentum sit amet magna. Nulla quam arcu, mattis sed maximus eget, maximus non est. Nam pretium scelerisque erat at cursus. Pellentesque id rutrum nulla. Nam sed odio auctor, sagittis ipsum auctor, iaculis ante. Maecenas at sapien semper, auctor ex vel, tincidunt libero. Fusce in feugiat ipsum,  gravida dui. Donec lobortis ante sem, at laoreet turpis posuere et. Pellentesque bibendum ultricies ultricies. Curabitur sit amet nisl turpis. Curabitur sodales nulla in metus vestibulum dignissim. Nulla dolor mauris, dignissim mollis sodales eu, mollis pellentesque libero. Donec arcu tortor, pellentesque eget justo non, volutpat iaculis libero. Phasellus vitae  metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc ultrices magna velit, laoreet semper felis posuere ac.
+
+</p><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum gravida justo nec tellus iaculis, et facilisis ex placerat. Integer tempus libero orci, eu suscipit tellus malesuada quis. Proin sem ex, venenatis vel molestie et, interdum vitae mauris. Suspendisse id tempus sapien. Vestibulum euismod, arcu ut bibendum convallis, sapien mi hendrerit est, nec aliquet ligula enim sit amet nisl. Pellentesque id dignissim leo, lobortis iaculis est. Proin in erat at nisl maximus posuere id quis diam. Morbi rhoncus facilisis odio, congue scelerisque nunc luctus vehicula. Etiam cursus libero at odio luctus, non varius arcu maximus.
+
+</p><center><div class="click">
+<a href="#ch2">◄</a>     <a href="#ch4">►</a>
+</div></center>
+
+</div>
+</div>
+
+<div id="ch4" class="storybox_push"></div>
+<div class="talesbox">
+<div class="tales">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ligula felis, scelerisque vitae vulputate at, condimentum sit amet magna. Nulla quam arcu, mattis sed maximus eget, maximus non est. Nam pretium scelerisque erat at cursus. Pellentesque id rutrum nulla. Nam sed odio auctor, sagittis ipsum auctor, iaculis ante. Maecenas at sapien semper, auctor ex vel, tincidunt libero. Fusce in feugiat ipsum,  gravida dui. Donec lobortis ante sem, at laoreet turpis posuere et. Pellentesque bibendum ultricies ultricies. Curabitur sit amet nisl turpis. Curabitur sodales nulla in metus vestibulum dignissim. Nulla dolor mauris, dignissim mollis sodales eu, mollis pellentesque libero. Donec arcu tortor, pellentesque eget justo non, volutpat iaculis libero. Phasellus vitae  metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc ultrices magna velit, laoreet semper felis posuere ac.
+
+</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ligula felis, scelerisque vitae vulputate at, condimentum sit amet magna. Nulla quam arcu, mattis sed maximus eget, maximus non est. Nam pretium scelerisque erat at cursus. Pellentesque id rutrum nulla. Nam sed odio auctor, sagittis ipsum auctor, iaculis ante. Maecenas at sapien semper, auctor ex vel, tincidunt libero. Fusce in feugiat ipsum,  gravida dui. Donec lobortis ante sem, at laoreet turpis posuere et. Pellentesque bibendum ultricies ultricies. Curabitur sit amet nisl turpis. Curabitur sodales nulla in metus vestibulum dignissim. Nulla dolor mauris, dignissim mollis sodales eu, mollis pellentesque libero. Donec arcu tortor, pellentesque eget justo non, volutpat iaculis libero. Phasellus vitae  metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc ultrices magna velit, laoreet semper felis posuere ac.
+
+</p><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum gravida justo nec tellus iaculis, et facilisis ex placerat. Integer tempus libero orci, eu suscipit tellus malesuada quis. Proin sem ex, venenatis vel molestie et, interdum vitae mauris. Suspendisse id tempus sapien. Vestibulum euismod, arcu ut bibendum convallis, sapien mi hendrerit est, nec aliquet ligula enim sit amet nisl. Pellentesque id dignissim leo, lobortis iaculis est. Proin in erat at nisl maximus posuere id quis diam. Morbi rhoncus facilisis odio, congue scelerisque nunc luctus vehicula. Etiam cursus libero at odio luctus, non varius arcu maximus.
+</p><center><div class="click">
+<a href="#ch3">◄</a>    
+</div></center>
+
+</div>
+</div>
+
+
+<div id="push" class="storybox_push"></div>
+</div></div>
+<div style="margin-top: -15px;"></div>
+</div>
+<a name="friends"></a>
+<h1>RELATIONSHIPS</h1><h2>text here if you want it.</h2>
+
+<p></p><div id="box">
+
+<div id="neo">
+<a href="/petlookup.phtml?pet=Kuyir">
+<img src="http://pets.neopets.com/cpn/Kuyir/1/5.png"></a>
+</div>
+<div id="friendbox" style="height: 300px;">
+<div id="friendbox-outer">
+<h3>EXAMPLE</h3>
+<center><strong>[ <a href="/~Kuyir">petpage</a></strong>  ✧ <strong><a href="/petlookup.phtml?pet=Kuyir">lookup</a> ]</strong></center>
+<img src="http://i.ibb.co/QjqGfKB/3600-EE24-326-A-4-D41-83-EB-0-B1-CE0-BEFC61.png" height="200" style="float: right;"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ligula felis, scelerisque vitae vulputate at, condimentum sit amet magna. Nulla quam arcu, mattis sed maximus eget, maximus non est. Nam pretium scelerisque erat at cursus. Pellentesque id rutrum nulla. Nam sed odio auctor, sagittis ipsum auctor, iaculis ante. Maecenas at sapien semper, auctor ex vel, tincidunt libero. Fusce in feugiat ipsum,  gravida dui. Donec lobortis ante sem, at laoreet turpis posuere et. Pellentesque bibendum ultricies ultricies. Curabitur sit amet nisl turpis.
+
+
+</p></div></div>
+
+
+<div id="neo">
+<a href="/petlookup.phtml?pet=oo__kota__oo">
+<img src="http://pets.neopets.com/cpn/oo__kota__oo/1/5.png"></a>
+</div>
+<div id="friendbox" style="height: 300px;">
+<div id="friendbox-outer">
+<h3>EXAMPLE</h3>
+<center><strong>[ <a href="/~oo__kota__oo">petpage</a></strong> ✧ <strong><a href="/petlookup.phtml?pet=oo__kota__oo">lookup</a> ]</strong></center>
+<img src="http://i.ibb.co/t4C6w0D/E8437629-D60-B-4861-B6-E4-A82-B41856-EED.png" height="240" style="float: right;"><b>Lorem Ipsum</b> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+</div></div>
+
+<p></p>
+
+</div>
+
+<a name="extras"></a>
+<h1>GALLERY</h1><h2>enjoy!</h2>
+
+<p></p><div id="box">
+
+<center><div style="float: left; width: 10px;"></div>
+<ul class="arts"><li><img src="http://i.ibb.co/YRD2PgN/0-C0-A4643-7380-42-E1-9-B00-E503-D4-DBE9-B7.png" class="icon"><span style="position: absolute;"><img src="http://i.ibb.co/YRD2PgN/0-C0-A4643-7380-42-E1-9-B00-E503-D4-DBE9-B7.png" width="500"></span>
+</li>
+<li><img src="http://i.ibb.co/4V6CbTX/CA178-DC1-49-A2-4-CAF-8-B29-C655-BAF3-EA6-B.png" class="icon"><span style="position: absolute;"><img src="http://i.ibb.co/4V6CbTX/CA178-DC1-49-A2-4-CAF-8-B29-C655-BAF3-EA6-B.png"></span>
+</li>
+<li><img src="http://i.ibb.co/6tfSPTd/7-ECA9-DD3-F77-F-45-DE-98-D5-38-A1-A68-CA24-B.png" class="icon"><span style="position: absolute;"><img src="http://i.ibb.co/6tfSPTd/7-ECA9-DD3-F77-F-45-DE-98-D5-38-A1-A68-CA24-B.png"></span>
+</li>
+<li><img src="http://i.imgur.com/S69Gm0j.png" class="icon"><span style="position: absolute;">Text/pic here!</span>
+</li>
+
+<p><strong>art by others</strong>
+</p><li><img src="http://arcadiance.neocities.org/Images/Art/radio/bobble/blake.png" class="icon"><span style="position: absolute;"><img src="http://arcadiance.neocities.org/Images/Art/radio/bobble/blake.png" height="350"> Art by: <a href="/~Radstorm">Mary</a></span></li>
+
+<li><img src="http://i.ibb.co/wppMXPz/E00624-BB-2815-477-A-8291-91-EAC718-C2-C6.png" class="icon"><span style="position: absolute;"><img src="http://i.ibb.co/wppMXPz/E00624-BB-2815-477-A-8291-91-EAC718-C2-C6.png"> Art by: <a href="/userlookup.phtml?user=marisn0w">Mary</a></span></li>
+<li><img src="http://i.imgur.com/SVJWIeq.png" class="icon"><span style="position: absolute;"><img src="http://i.imgur.com/SVJWIeq.png" width="500"> Art by: <a href="/userlookup.phtml?user=_dark_shadow_wolves_">Juri</a></span></li>
+
+<li><img src="http://i.ibb.co/DKrr3FZ/blakesterr.png" class="icon"><span style="position: absolute;"><img src="http://i.ibb.co/DKrr3FZ/blakesterr.png" width="500"> Art by: <a href="/userlookup.phtml?user=lacievali">Lacie</a></span></li>
+
+
+</ul><br><div style="height: 5px;"></div>
+
+<strong style="letter-spacing: 2px;">⊹ hover for larger images ⊹</strong></center><p>
+
+<span class="custom" style="position: relative;">
+<img src="http://pets.neopets.com/cpn/Blakesterr/1/5.png" style="width: 360px;"></span>
+<span class="custom2" style="position: relative;">
+<img src="http://pets.neopets.com/cpn/Blakesterr/1/5.png" style="width: 360px;"></span>
+</p></div>
+
+<a name="end"></a>
+<h1>GOODBYE</h1><h2>text here if you want it.</h2>
+
+<div id="box">
+<table><tr><td>
+<div id="credit1">
+<b>　✦ LINK BACK (50x50)</b><br><p></p><center>COMING SOON.<br><textarea style="margin-bottom: 5px;">COMING SOON.
+
+</textarea></center><p>
+
+<b>　✦ LINK BACK (88x31)</b>
+</p><p></p><center><img src="http://arcadiance.neocities.org/Images/buttons/blake.gif"><br><textarea><a href="/~Blakesterr">
+<img src="http://arcadiance.neocities.org/Images/buttons/blake.gif" border="0"></a>
+</textarea></center>
+
+</div></td>
+
+<td>
+<div id="credit2">
+<b>　✦ CONTENT</b>
+<br>Stuff by <a href="/userlookup.phtml?user=_cabby">Winnie</a> for <a href="/petlookup.phtml?pet=Blakesterr">Blakesterr</a>
+
+<p><b>　✦ CODING</b>
+<br>Base layout by <a href="/~Washi">WASHI</a>
+<br>Transparent overlay pngs by <a href="/~Cecira">LOLWAT</a>
+<br>Custom & art hover code by <a href="/~Cecira">LOLWAT</a>
+
+</p><p><b>　✦ ARTWORK</b>
+<br>Background from <a href="/~ventria">MARIPOSA</a>
+<br>Art by me (unless otherwise stated)
+</p></div></td>
+</tr></table><div id="otherlinks">
+<b>　✦ LINK OUT</b><br><center><a href="/~Avanicora">
+<img src="http://arcadiance.neocities.org/Images/buttons/ava88a.gif" border="0"></a>
+<a href="/~DexShaw"><img src="http://arcadiance.neocities.org/Images/buttons/dexbuttonlong.gif" border="0"></a> <a href="/~Radstorm">
+<img src="http://arcadiance.neocities.org/Images/buttons/radbutton.gif" border="0"></a>
+
+
+</center></div></div>
+
+</div><br><br></div>
